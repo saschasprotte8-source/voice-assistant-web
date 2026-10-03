@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voice Assistant</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Sprach-Assistent</p>
+          <h1>Voice Assistant</h1>
+        </div>
+        <button id="toggleMic" class="primary-btn">
+          <span class="icon">🎙️</span>
+          <span>Starten</span>
+        </button>
+      </header>
+
+      <main class="panel">
+        <section class="status-box">
+          <div class="status-row">
+            <span class="label">Status</span>
+            <span id="statusText" class="status idle">Bereit</span>
+          </div>
+          <div class="status-row">
+            <span class="label">Stimme</span>
+            <span id="voiceInfo" class="value">Männlich (automatisch)</span>
+          </div>
+          <div class="status-row">
+            <span class="label">Modus</span>
+            <span id="modeInfo" class="value">Browser-Spracherkennung</span>
+          </div>
+        </section>
+
+        <section class="conversation-box">
+          <div class="chat-log" id="chatLog">
+            <div class="message assistant">
+              <strong>Assistent:</strong>
+              <span>Hallo! Ich bin bereit. Sag einfach etwas, damit ich dir antworte.</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="controls-box">
+          <div class="setting-row">
+            <label for="apiKeyInput">OpenAI API Key (optional)</label>
+            <input id="apiKeyInput" type="password" placeholder="sk-..." />
+          </div>
+
+          <div class="setting-row">
+            <label for="promptInput">System-Prompt</label>
+            <textarea id="promptInput" rows="4">Du bist ein hilfsbereiter, freundlich und natürlich sprechender Assistent. Antworte kurz, klar und freundlich.</textarea>
+          </div>
+
+          <div class="button-row">
+            <button id="speakTest" class="secondary-btn">Test-Stimme</button>
+            <button id="clearChat" class="secondary-btn">Chat löschen</button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
